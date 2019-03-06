@@ -23,6 +23,35 @@
     <!-- Custom styles for this template -->
     <link href="css/resume.css" rel="stylesheet">
 
+    <script>
+        var deadline = 'March 24 2019 10:00:00 GMT+0100';
+        function getTimeRemaining(endtime){
+            var t = Date.parse(endtime) - Date.parse(new Date());
+            var seconds = Math.floor( (t/1000) % 60 );
+            var minutes = Math.floor( (t/1000/60) % 60 );
+            var hours = Math.floor( (t/(1000*60*60)) % 24 );
+            var days = Math.floor( t/(1000*60*60*24) );
+            return {
+                'total': t,
+                'days': days,
+                'hours': hours,
+                'minutes': minutes,
+                'seconds': seconds
+            };
+        }
+
+        function setRemainingTime(){
+            let time = getTimeRemaining(deadline);
+            document.getElementById("countdown").textContent = time.days + " dni, " + time.hours + " godzin, " + time.minutes + " minut i " + time.seconds + " sekund.";
+        }
+
+        window.onload =  () => setRemainingTime();
+
+        setInterval(() => { 
+            setRemainingTime();
+        }, 1000);
+    </script>
+
   </head>
 
   <body id="page-top">
@@ -30,9 +59,13 @@
         <div class="contect-rectangle">
           <img class="img-fluid img-profile rounded-circle mx-auto mb-2 profile-picture"  src="https://i.wpimg.pl/O/644x394/d.wpimg.pl/308684553-1511526126/duda.jpg">
           <img class="img-fluid img-profile rounded-circle mx-auto mb-2 profile-picture" src="https://ocdn.eu/pulscms-transforms/1/xvXk9kqTURBXy8zYTgyOWE1ZjY4MzA1YjYwODgxZDhiODEwZWY2ODAzZS5qcGVnkZMFzQFAzPCBoTAB">
-          <h1 class="mb-0">Codziennie o krok bliżej <Br>do 
-            <span class="text-primary">suckesu Magdonga</span>
+          <h1 class="mb-0">Wielki suckes <Br>do 
+            <span class="text-primary">już blisko</span>
           </h1>
+          <Br>
+          <h3 id="timer" class="mb-4"> 
+            Pozostało: <span id="countdown"></span>
+          </h3>
           <br>
 
           <div class="subheading mb-2">
@@ -43,20 +76,16 @@
               Dzień 2 - <a href="https://www.youtube.com/watch?v=B1JyY2GzsHg">You are limitless</a>
           </div>
 
-          <!-- <div class="subheading mb-2">
+          <div class="subheading mb-2">
               Dzień 3 - <a href="https://www.youtube.com/watch?v=aDCGrINPGUQ">Through hell</a>
-          </div> -->
+          </div>
 
           <!-- <div class="subheading mb-2">
-              Dzień 3 - <a href=""></a>
-          </div> -->
-
-          <!-- <div class="subheading mb-2">
-              Dzień 4 - <a href=""></a>
+              Dzień 4 - <a href="https://www.youtube.com/watch?v=ktjMz7c3ke4">Pełna moc możliwości (Jacek Walkiewicz)</a>
           </div>  -->
 
           <!-- <div class="subheading mb-2">
-              Dzień 5 - <a href=""></a>
+              Dzień 5 - <a href="https://www.youtube.com/watch?v=--ZLpgWwGC4">Motywacja do działania (Rocky)</a>
           </div>  -->
 
           <!-- <div class="subheading mb-2">

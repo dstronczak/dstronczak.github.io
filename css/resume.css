@@ -197,6 +197,7 @@ border: 0.5rem solid rgba(255, 255, 255, 0.2);
 }
 
 .contect-rectangle {
+  width: 700px;
   display: inline-block;
   border: 3px dashed #ccc;
   padding: 2rem;
