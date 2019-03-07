@@ -24,9 +24,10 @@
     <link href="css/resume.css" rel="stylesheet">
 
     <script>
-        var deadline = 'March 26 2019 10:00:00 GMT+0100';
+        var deadline = 'January 07 2019 10:00:00 GMT+0100';
         function getTimeRemaining(endtime){
-            var t = Date.parse(endtime) - Date.parse(new Date());
+            // var t = Date.parse(endtime) - Date.parse(new Date());
+            var t = Date.parse(new Date()) - Date.parse(endtime);
             var seconds = Math.floor( (t/1000) % 60 );
             var minutes = Math.floor( (t/1000/60) % 60 );
             var hours = Math.floor( (t/(1000*60*60)) % 24 );
@@ -42,7 +43,7 @@
 
         function setRemainingTime(){
             let time = getTimeRemaining(deadline);
-            document.getElementById("countdown").textContent = time.days + " dni, " + time.hours + " godzin, " + time.minutes + " minut i " + time.seconds + " sekund.";
+            document.getElementById("countdown").textContent = time.days + " dni, " + time.hours + " godzin, " + time.minutes + " minut."
         }
 
         window.onload =  () => setRemainingTime();
@@ -64,7 +65,7 @@
           </h1>
           <Br>
           <h3 id="timer" class="mb-4"> 
-            Pozostało: <span id="countdown"></span>
+            Tyle było już uczone: <span id="countdown"></span>
           </h3>
           <br>
 
