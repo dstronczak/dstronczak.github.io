@@ -74,6 +74,29 @@ p.lead {
   background-color: #297fb7;
 }
 
+.nav-icons a {
+  display: inline-block;
+  height: 2rem;
+  width: 2rem;
+  background-color: #495057;
+  color: #fff !important;
+  border-radius: 100%;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 2rem;
+  margin-right: 0rem;
+  position: relative;
+  top: 0px;
+}
+
+.nav-icons a:last-child {
+  margin-right: 0;
+}
+
+.nav-icons a:hover {
+  background-color: #297fb7;
+}
+
 .dev-icons {
   font-size: 3rem;
 }
