@@ -1,43 +1,40 @@
 <html>
+    <body>
+        MBA Survey Entry Point <br><br>    
+        
+        <script>
+            //Get url params
+            var url = new URL(window.location.href );
+            var debug = url.searchParams.get("debug");
+            var s = url.searchParams.get("s");
+            console.log("source (s): ", s);
 
 
-<script>
-    //Get url params
-    var url = new URL(window.location.href );
-    var debug = url.searchParams.get("debug");
-    var s = url.searchParams.get("s");
-    console.log("source (s): ", s);
 
-    
-    
-    // get a random number between 0 and 999
-    var randNum = Math.floor(Math.random() * 1000);
-    var index = randNum % 2;
+            // get a random number between 0 and 999
+            var randNum = Math.floor(Math.random() * 1000);
+            var index = randNum % 2;
 
-    // An array of URL's
-    var randURLs = [
-        "http://onet.pl",
-        "http://wp.pl"
-    ];
-    
-    var newLoc = randURLs[index] + "?s=" + s;
+            // An array of URL's
+            var randURLs = [
+                "http://onet.pl",
+                "http://wp.pl"
+            ];
 
-    if(debug=="y"){
-        console.log("Simulating redicrect to: ", newLoc);
-    } else {
-        console.log("Performing actual redirect...");
-        window.location = newLoc;
-    }
-    
-    //DEBUG
-    
-    document.body.innerHTML += "<span>I would redirect you to: " + newLoc + "</span>";
+            var newLoc = randURLs[index] + "?s=" + s;
+
+            if(debug=="y"){
+                console.log("Simulating redicrect to: ", newLoc);
+            } else {
+                console.log("Performing actual redirect...");
+                window.location = newLoc;
+            }
+
+            //DEBUG
+
+            document.body.innerHTML += "<span>I would redirect you to: " + newLoc + "</span>";
     
   
-</script>
-  
-<body>
-MBA Survey Entry Point <br><br>    
-</body>   
-    
+        </script>
+    </body>   
 </html>
