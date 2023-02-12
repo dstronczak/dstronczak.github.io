@@ -22,9 +22,19 @@
     if(debug=="y"){
         console.log("Simulating redicrect to: ", newLoc);
     } else {
-        console.log("would redirect...");
-        //window.location = newLoc;
+        console.log("Performing actual redirect...");
+        window.location = newLoc;
     }
+    
+    //DEBUG
+    
+    let add_element = () => {
+        const template = document.createElement('div');
+        template.innerHTML = "I would redirect you to: " + newLoc;
+
+        document.body.appendChild(template);
+    }
+
     
   
 </script>
