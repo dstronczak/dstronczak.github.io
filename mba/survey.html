@@ -31,15 +31,7 @@
     
     //DEBUG
     
-    let add_element = () => {
-        const template = document.createElement('div');
-        template.innerHTML = "I would redirect you to: " + newLoc;
-
-        document.body.appendChild(template);
-    }
-    
-    add_element();
-
+    document.body.innerHTML += "<span>I would redirect you to: " + newLoc + "</span>";
     
   
 </script>
