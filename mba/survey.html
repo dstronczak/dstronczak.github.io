@@ -1,0 +1,32 @@
+<script>
+    // get a random number between 0 and 999
+    var randNum = Math.floor(Math.random() * 1000);
+    
+    var newLoc = "";
+
+    // An array of URL's
+    var randURLs = [
+        "http://onet.pl",
+        "http://wp.pl"
+    ];
+
+    // There was a 1 in 500 chance we generated a zero.
+  
+    if(randNum % 2 == 0) {
+      //50% of audience
+      newLoc = randURLs[0];
+      
+    } 
+    else {
+      //50% of audience
+      newLoc = randURLs[1];
+    }
+    
+//     if (randNum == 0) {
+//         var randURL = Math.floor(Math.random() * randURLs.length);
+
+//     }
+  
+     window.open(randURLs[randURL]);
+  
+</script>
