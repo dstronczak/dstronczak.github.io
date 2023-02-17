@@ -6,8 +6,8 @@
             //Get url params
             var url = new URL(window.location.href );
             var debug = url.searchParams.get("debug");
-            var s = url.searchParams.get("s");
-            console.log("source (s): ", s);
+            var mnef = url.searchParams.get("mnef");
+            console.log("source (mnef): ", mnef);
 
 
 
@@ -17,11 +17,11 @@
 
             // An array of URL's
             var randURLs = [
-                "http://onet.pl",
-                "http://wp.pl"
+                "https://z36r2zkdw29.typeform.com/to/ZJjBpHJ6#bdhu=fy7e",
+                "https://z36r2zkdw29.typeform.com/to/ZJjBpHJ6#bdhu=3nu"
             ];
 
-            var newLoc = randURLs[index] + "?s=" + s;
+            var newLoc = randURLs[index] + "&mnef=" + mnef;
 
             if(debug=="y"){
                 console.log("Simulating redicrect to: ", newLoc);
