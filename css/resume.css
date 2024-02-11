@@ -14,6 +14,12 @@ body {
   overflow-wrap: break-word;
 }
 
+.contactbanner { 
+  border: 2px dashed #ccc;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
 
 @media screen and (min-width: 300px) {
   body {
@@ -37,6 +43,11 @@ body {
 
   h3, h4, h5, h6 {
     font-size: 2rem;
+  }
+
+  .contactbanner { 
+    font-size: 1rem;
+    
   }
 }
 
@@ -117,6 +128,21 @@ p.lead {
   margin-bottom: 1rem; /* Space below the link for separation */
 }
 
+a.emailme {
+  text-transform: uppercase;
+  font-weight: 400; /* Slightly lighter than subheading */
+  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.2rem; /* Smaller than subheading */
+}
+
+a.emailme::before {
+ content: '📩 ';
+}
+
+a.emailme::after {
+  content: ' 📩';
+ }
+
 
 .social-icons  a.icon  {
   display: inline-block;
@@ -146,6 +172,8 @@ p.lead {
   margin-bottom: 1rem; /* Space below the link for separation */
   background-color: #ffffff !important;
 } 
+
+
 
 .social-icons a:last-child {
   margin-right: 0;
