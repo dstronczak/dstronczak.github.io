@@ -253,8 +253,8 @@ a:hover, a:focus, a:active {
 }
 
 .profile-picture {
-max-width: 10rem;
-max-height: 10rem;
+max-width: 15rem;
+max-height: 15rem;
 border: 0.5rem solid rgba(255, 255, 255, 0.2);
 }
 
