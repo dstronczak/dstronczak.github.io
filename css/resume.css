@@ -342,9 +342,9 @@ border: 0.5rem solid rgba(255, 255, 255, 0.2);
 
 
 .header-image img {
-  width: 70%; /* Sets the image width to 70% of its container */
+  width: 90%; /* Sets the image width to 70% of its container */
   /* margin: auto; */
   height: auto; /* Keeps the image aspect ratio intact */
   display: block; /* Aligns the image correctly within its container */
-
+  margin: auto;
 }
